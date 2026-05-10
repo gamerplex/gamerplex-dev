@@ -1,0 +1,193 @@
+{
+  "backend": {
+    "id": "claude-oauth",
+    "label": "Claude Code",
+    "model": null,
+    "baseUrl": null,
+    "apiKey": null
+  },
+  "testName": "claude-oauth",
+  "totalDurationMs": 520322,
+  "totalDurationMin": "8.67",
+  "finalSize": 13866,
+  "sizeGrowth": 11392,
+  "totalEdits": 19,
+  "promptsCompleted": 5,
+  "promptsFailed": 1,
+  "results": [
+    {
+      "name": "01_setup",
+      "prompt": "Build me Space Invaders, 2D, classic 1980s arcade style. Black background, 768x720 canvas. A green pixelated player ship at the bottom that moves left/right with arrow keys. Use vanilla JavaScript and canvas only, single HTML file. No external libraries.",
+      "expectedKeywords": [
+        "canvas",
+        "ArrowLeft",
+        "ArrowRight",
+        "fillRect"
+      ],
+      "validates": "Canvas, player ship, keyboard input",
+      "error": "timeout after 180000ms",
+      "durationMs": 0
+    },
+    {
+      "name": "02_enemies",
+      "prompt": "Add a grid of 5 rows x 11 columns of green pixelated enemy aliens at the top. They should move left and right as a group, dropping down one row when hitting the edge, getting faster as fewer remain.",
+      "durationMs": 80254,
+      "sizeBefore": 2474,
+      "sizeAfter": 3893,
+      "sizeDelta": 1419,
+      "toolCalls": [
+        "Read",
+        "Write"
+      ],
+      "editCount": 1,
+      "responseText": "Replaced the intro with a 5×11 grid of green pixelated invaders. The formation steps horizontally on a fixed timer, alternates between two sprite frames, and drops one row + reverses on edge contact. ",
+      "validation": {
+        "valid": true,
+        "checks": {
+          "hasCanvas": true,
+          "hasScript": true,
+          "hasGameLoop": true,
+          "size": 3891,
+          "keywordsFound": [
+            "rows",
+            "cols"
+          ],
+          "keywordsMissing": [
+            "enemies"
+          ]
+        }
+      }
+    },
+    {
+      "name": "03_shooting",
+      "prompt": "Spacebar shoots a white bullet from the player ship upward. Bullets that hit enemies destroy them. Add a score counter that increments when an enemy is destroyed.",
+      "durationMs": 45270,
+      "sizeBefore": 3893,
+      "sizeAfter": 6104,
+      "sizeDelta": 2211,
+      "toolCalls": [
+        "Read",
+        "Edit",
+        "Edit",
+        "Edit",
+        "Edit"
+      ],
+      "editCount": 4,
+      "responseText": "Added a white player ship at the bottom, spacebar firing with cooldown, upward-moving bullets that destroy aliens on AABB collision, and a SCORE counter in the HUD that increments by 10 per kill. All ",
+      "validation": {
+        "valid": true,
+        "checks": {
+          "hasCanvas": true,
+          "hasScript": true,
+          "hasGameLoop": true,
+          "size": 6102,
+          "keywordsFound": [
+            "bullet",
+            "Space",
+            "score"
+          ],
+          "keywordsMissing": []
+        }
+      }
+    },
+    {
+      "name": "04_enemy_fire",
+      "prompt": "Enemies occasionally shoot bullets back down at the player. If an enemy bullet hits the player, the player loses a life. Start with 3 lives. Show lives in the UI.",
+      "durationMs": 66461,
+      "sizeBefore": 6104,
+      "sizeAfter": 8830,
+      "sizeDelta": 2726,
+      "toolCalls": [
+        "Read",
+        "Edit",
+        "Edit",
+        "Edit",
+        "Edit",
+        "Edit",
+        "Edit"
+      ],
+      "editCount": 6,
+      "responseText": "Added enemy bullets and a lives system:\n\n- New CFG entries for enemy bullet speed/interval/color, starting lives (3), and respawn invulnerability\n- `fireEnemyBullet()` picks a random frontmost alien p",
+      "validation": {
+        "valid": true,
+        "checks": {
+          "hasCanvas": true,
+          "hasScript": true,
+          "hasGameLoop": true,
+          "size": 8828,
+          "keywordsFound": [
+            "lives",
+            "enemyBullet"
+          ],
+          "keywordsMissing": []
+        }
+      }
+    },
+    {
+      "name": "05_game_states",
+      "prompt": "Add game over screen when lives reach 0. Add win screen when all enemies destroyed. Both screens show the final score and 'Press SPACE to restart'.",
+      "durationMs": 44496,
+      "sizeBefore": 8830,
+      "sizeAfter": 9798,
+      "sizeDelta": 968,
+      "toolCalls": [
+        "Read",
+        "Edit",
+        "Edit",
+        "Edit",
+        "Edit"
+      ],
+      "editCount": 4,
+      "responseText": "I'll add a win state, restart logic, and update the end screens to show score + restart prompt.Now add win detection after kill and update the render to draw both screens.Changes:\n- Added `won` state ",
+      "validation": {
+        "valid": true,
+        "checks": {
+          "hasCanvas": true,
+          "hasScript": true,
+          "hasGameLoop": true,
+          "size": 9796,
+          "keywordsFound": [
+            "gameOver",
+            "win",
+            "restart"
+          ],
+          "keywordsMissing": []
+        }
+      }
+    },
+    {
+      "name": "06_juice",
+      "prompt": "Add juice: screen shake when player is hit, particles when enemies explode, simple bleep/boop sound effects with Web Audio API (no external audio files). Make it feel alive.",
+      "durationMs": 103820,
+      "sizeBefore": 9798,
+      "sizeAfter": 13868,
+      "sizeDelta": 4070,
+      "toolCalls": [
+        "Read",
+        "Edit",
+        "Edit",
+        "Edit",
+        "Edit"
+      ],
+      "editCount": 4,
+      "responseText": "Adding juice: Web Audio system, particle bursts, and camera shake wired through the existing EventBus.Now wrap the world draw in a shake transform and draw particles inside it. UI stays unshaken.Added",
+      "validation": {
+        "valid": true,
+        "checks": {
+          "hasCanvas": true,
+          "hasScript": true,
+          "hasGameLoop": true,
+          "size": 13866,
+          "keywordsFound": [
+            "shake",
+            "particles",
+            "audioContext"
+          ],
+          "keywordsMissing": []
+        }
+      }
+    }
+  ],
+  "timestamp": "2026-04-18T06:41:03.082Z",
+  "qualityScore": 93
+}

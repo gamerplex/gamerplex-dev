@@ -1,0 +1,23 @@
+{
+  "name": "@gamerplex/dev",
+  "version": "0.1.0",
+  "description": "Sovereign Game Development environment. Chat with AI, build games live at localhost:42069.",
+  "main": "dev-server.js",
+  "scripts": {
+    "start": "node dev-server.js",
+    "game": "node dev-server.js",
+    "test": "node --test test/",
+    "test:coverage": "node --test --experimental-test-coverage test/"
+  },
+  "keywords": [
+    "gamerplex",
+    "game-development",
+    "sovereign",
+    "dev-server",
+    "live-reload"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.20.0"
+  }
+}

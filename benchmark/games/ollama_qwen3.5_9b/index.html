@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gamerplex — New Game</title>
+<style>
+* { margin: 0; padding: 0; }
+body { background: #0a0a0f; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+canvas { image-rendering: pixelated; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+const W = 768, H = 600;
+const c = document.getElementById("c");
+c.width = W; c.height = H;
+const ctx = c.getContext("2d");
+
+// Animated blank canvas — looks alive, ready to become anything
+let t = 0;
+const particles = [];
+for (let i = 0; i < 40; i++) {
+  particles.push({
+    x: Math.random() * W,
+    y: Math.random() * H,
+    vx: (Math.random() - 0.5) * 0.3,
+    vy: (Math.random() - 0.5) * 0.3,
+    size: 1 + Math.random() * 2,
+    alpha: 0.1 + Math.random() * 0.2,
+  });
+}
+
+function draw() {
+  t += 0.016;
+  ctx.fillStyle = "#0a0a0f";
+  ctx.fillRect(0, 0, W, H);
+
+  // Floating particles (subtle life)
+  for (const p of particles) {
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+    if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+    ctx.globalAlpha = p.alpha * (0.5 + 0.5 * Math.sin(t * 2 + p.x * 0.01));
+    ctx.fillStyle = "#9945FF";
+    ctx.fillRect(p.x, p.y, p.size, p.size);
+  }
+  ctx.globalAlpha = 1;
+
+  // Grid lines (faint, like graph paper waiting for a blueprint)
+  ctx.strokeStyle = "rgba(153, 69, 255, 0.04)";
+  ctx.lineWidth = 1;
+  for (let x = 0; x < W; x += 48) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+  }
+  for (let y = 0; y < H; y += 48) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+  }
+
+  // Center text
+  const pulse = 0.7 + 0.3 * Math.sin(t * 1.5);
+  ctx.fillStyle = `rgba(153, 69, 255, ${pulse})`;
+  ctx.font = "bold 28px monospace";
+  ctx.textAlign = "center";
+  ctx.fillText("GAMERPLEX", W / 2, H / 2 - 40);
+
+  ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+  ctx.font = "14px monospace";
+  ctx.fillText("Sovereign Game Development", W / 2, H / 2);
+
+  ctx.fillStyle = "rgba(20, 241, 149, 0.6)";
+  ctx.font = "13px monospace";
+  ctx.fillText("Describe your game in the chat to begin.", W / 2, H / 2 + 40);
+
+  ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
+  ctx.font = "11px monospace";
+  ctx.fillText("Your machine. Your wallet. Your game.", W / 2, H / 2 + 70);
+
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{
+  "backend": {
+    "id": "ollama:gemma4:31b",
+    "label": "gemma4:31b",
+    "model": "gemma4:31b",
+    "baseUrl": "http://localhost:11434",
+    "apiKey": null
+  },
+  "testName": "ollama_gemma4_31b",
+  "totalDurationMs": 1080099,
+  "totalDurationMin": "18.00",
+  "finalSize": 2470,
+  "sizeGrowth": -4,
+  "totalEdits": 0,
+  "promptsCompleted": 0,
+  "promptsFailed": 6,
+  "results": [
+    {
+      "name": "01_setup",
+      "prompt": "Build me Space Invaders, 2D, classic 1980s arcade style. Black background, 768x720 canvas. A green pixelated player ship at the bottom that moves left/right with arrow keys. Use vanilla JavaScript and canvas only, single HTML file. No external libraries.",
+      "expectedKeywords": [
+        "canvas",
+        "ArrowLeft",
+        "ArrowRight",
+        "fillRect"
+      ],
+      "validates": "Canvas, player ship, keyboard input",
+      "error": "timeout after 180000ms",
+      "durationMs": 0
+    },
+    {
+      "name": "02_enemies",
+      "prompt": "Add a grid of 5 rows x 11 columns of green pixelated enemy aliens at the top. They should move left and right as a group, dropping down one row when hitting the edge, getting faster as fewer remain.",
+      "expectedKeywords": [
+        "enemies",
+        "rows",
+        "cols"
+      ],
+      "validates": "Enemy grid, movement pattern",
+      "error": "timeout after 180000ms",
+      "durationMs": 0
+    },
+    {
+      "name": "03_shooting",
+      "prompt": "Spacebar shoots a white bullet from the player ship upward. Bullets that hit enemies destroy them. Add a score counter that increments when an enemy is destroyed.",
+      "expectedKeywords": [
+        "bullet",
+        "Space",
+        "score"
+      ],
+      "validates": "Shooting mechanic, collision, scoring",
+      "error": "timeout after 180000ms",
+      "durationMs": 0
+    },
+    {
+      "name": "04_enemy_fire",
+      "prompt": "Enemies occasionally shoot bullets back down at the player. If an enemy bullet hits the player, the player loses a life. Start with 3 lives. Show lives in the UI.",
+      "expectedKeywords": [
+        "lives",
+        "enemyBullet"
+      ],
+      "validates": "Enemy bullets, player death, lives",
+      "error": "timeout after 180000ms",
+      "durationMs": 0
+    },
+    {
+      "name": "05_game_states",
+      "prompt": "Add game over screen when lives reach 0. Add win screen when all enemies destroyed. Both screens show the final score and 'Press SPACE to restart'.",
+      "expectedKeywords": [
+        "gameOver",
+        "win",
+        "restart"
+      ],
+      "validates": "Win/lose/restart loop",
+      "error": "timeout after 180000ms",
+      "durationMs": 0
+    },
+    {
+      "name": "06_juice",
+      "prompt": "Add juice: screen shake when player is hit, particles when enemies explode, simple bleep/boop sound effects with Web Audio API (no external audio files). Make it feel alive.",
+      "expectedKeywords": [
+        "shake",
+        "particles",
+        "audioContext"
+      ],
+      "validates": "Game feel, audio, particles",
+      "error": "timeout after 180000ms",
+      "durationMs": 0
+    }
+  ],
+  "timestamp": "2026-04-18T09:49:43.017Z",
+  "qualityScore": 12
+}

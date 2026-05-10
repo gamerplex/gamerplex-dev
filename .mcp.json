@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "gamerplex": {
+      "command": "node",
+      "args": ["../gamerplex-mcp/dist/index.js"],
+      "env": {}
+    }
+  }
+}

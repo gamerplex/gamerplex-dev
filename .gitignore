@@ -1,0 +1,40 @@
+
+# ── Secrets — NEVER commit ───────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*-keypair.json
+*-secret*.json
+*.pem
+agent-config.json
+treasury-keypair.json
+deploy-wallet.json
+id.json
+
+# ── Build / target — keypairs hide here ──────────────────────────
+target/
+.anchor/
+test-ledger/
+
+# ── Local-only legacy archives ───────────────────────────────────
+_archive/
+**/_archive/
+
+
+# ── Internal engineering docs — never push to public ────────────
+ENGINEERING/
+ENGINEERING_*/
+**/ENGINEERING/
+**/ENGINEERING_*/
+docs-internal/
+
+# ── Node + system + logs ─────────────────────────────────────────
+node_modules/
+.DS_Store
+**/.DS_Store
+*.log
+sessions/
+.next/
+dist/
+build/
+
