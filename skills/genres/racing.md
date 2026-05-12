@@ -27,6 +27,6 @@ The player must FEEL fast even when the car isn't going fast. Speed is a visual 
 
 ## Gamerplex Fit
 - Ghost races as challenge links (async multiplayer via on-chain replays)
-- Wagered time trials via Contention Markets
+- 1v1 time trials via Contention Markets
 - Vehicle NFTs with different stats
 - SOAR leaderboard: best lap times per track

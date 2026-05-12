@@ -9,7 +9,7 @@ SMART:   Pathfind around obstacles. Flank. Retreat when low HP.
 SCARY:   Adapt to player behavior. Learn patterns. Surprise.
 ```
 
-Every Gamerplex game should be at least BASIC. Wagered games should be SMART (the AI opponent must feel fair).
+Every Gamerplex game should be at least BASIC. 1v1 games should be SMART (the AI opponent must feel fair).
 
 ## Finite State Machine (FSM)
 
@@ -112,4 +112,4 @@ Gamerplex agents play games 24/7 for real money. They need to be:
 - GOAP (Goal-Oriented Action Planning) — used in AAA stealth games
 - Monte Carlo Tree Search for strategy games (used in AlphaGo)
 - Machine learning for game AI (training bots via self-play)
-- How to make AI feel "fair" in wagered matches (perceived fairness ≠ optimal play)
+- How to make AI feel "fair" in 1v1 matches (perceived fairness ≠ optimal play)

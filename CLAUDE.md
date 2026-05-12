@@ -142,7 +142,7 @@ When wiring on-chain features, follow these principles:
 ```
 1. GAME FIRST, CHAIN SECOND
    The game must be fun WITHOUT any web3 features.
-   Tokens, NFTs, wagering are multipliers, not foundations.
+   Tokens, NFTs, on-chain settlement are multipliers, not foundations.
 
 2. NEVER TRUST THE CLIENT
    Scores, match results, game state — validate on-chain or server-side.
@@ -162,7 +162,7 @@ When wiring on-chain features, follow these principles:
 
 6. PERMISSIONLESS
    Anyone can play. Wallet optional for free play.
-   Wallet required only for: wagering, token purchase, NFT ownership.
+   Wallet required only for: paid matches, token purchase, NFT ownership.
 ```
 
 ## Skills

@@ -48,6 +48,6 @@ Floor 11+:   Harder loops (optional, for leaderboard chasers)
 ## Gamerplex Fit
 - Seed as challenge link: "Beat run #7F3A2B" (same dungeon, compete on score)
 - On-chain run history (GPX1 memo format)
-- Wagered runs: "I bet $5 I go further than you on this seed"
+- 1v1 runs: "Same seed, who goes further?"
 - Character NFTs: unique starting loadouts, burned on permadeath
 - SOAR leaderboard: deepest floor + score

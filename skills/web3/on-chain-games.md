@@ -5,7 +5,7 @@
 ```
 GAME LOGIC:       MagicBlock Ephemeral Rollup (sub-200ms on-chain state)
 GAME STATE:       BOLT ECS (Entity Component System, composable)
-WAGERING:         Contention Markets (2% rake, atomic settlement)
+SETTLEMENT:       Contention Markets (2% service fee, atomic settlement)
 TOKEN ECONOMY:    Flipcash (bonding curve, USD-backed, 1% burn on sell)
 LEADERBOARD:      SOAR (on-chain rankings, portable across games)
 GAME HISTORY:     GPX1 (memo standard, permanent move archive)
@@ -29,7 +29,7 @@ FREE PLAY:        Ephemeral accounts via PoolSponsor PDA (zero cost to player)
    Player sees their ranking.
 
 4. ADD CONTENTION MARKETS
-   Wagered matches: deposit → play → settle → payout.
+   1v1 matches: deposit → play → settle → payout.
    Start with devnet. Real money = real auditing.
 
 5. ADD FLIPCASH TOKEN
@@ -75,7 +75,7 @@ COST MODEL:
 ## Contention Markets Integration
 
 ```javascript
-// Create a wagered match:
+// Create a 1v1 match:
 const market = await contentionClient.createMarket({
   gameId: "chess",
   player1: wallet.publicKey,
@@ -89,7 +89,7 @@ await contentionClient.resolveMarket({
   market: market.publicKey,
   winner: 1, // player1 wins
 });
-// 2% rake auto-deducted. 1% protocol, 1% game creator.
+// 2% service fee auto-deducted. 1% protocol, 1% game creator.
 ```
 
 ## Token Anti-Exploitation

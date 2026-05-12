@@ -31,6 +31,6 @@ Miss:     >100ms  (no score, combo breaks)
 
 ## Gamerplex Fit
 - On-chain score verification (input timestamps provable via MagicBlock ER)
-- Wagered score battles: same song, who scores higher?
+- 1v1 score battles: same song, who scores higher?
 - Community charts: creators upload beat maps, earn from plays
 - Music NFTs: own the chart, earn when others play it

@@ -22,6 +22,6 @@ On hit: freeze both characters for 2-4 frames (hitstop), then apply knockback + 
 
 ## Gamerplex Fit
 - Frame-perfect inputs verifiable on-chain (MagicBlock ER timestamps)
-- Wagered best-of-3 matches via Contention Markets
+- 1v1 best-of-3 matches via Contention Markets
 - ELO rankings on SOAR
 - Character NFTs with unique movesets

@@ -56,6 +56,6 @@ Each cycle ESCALATES:
 
 ## Gamerplex Fit
 - PER (Private Ephemeral Rollup): monster position hidden from client — truly unknown
-- Wagered horror: "Survive 5 minutes" challenge with real stakes
-- Spectator betting: "Will they survive this room?"
+- 1v1 horror: "Survive 5 minutes" challenge with real stakes
+- Spectator markets: "Will they survive this room?"
 - On-chain permadeath: character death is permanent (NFT burned)

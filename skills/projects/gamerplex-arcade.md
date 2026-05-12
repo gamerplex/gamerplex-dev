@@ -20,7 +20,7 @@ If those signals are absent, fall back to generic Three.js / web3 skills.
 | ArcadeConfig PDA | `7XCKkcJf6uBp1qZV7ChZEjxqsaaZH4aAtmRhx6Tav6hE` | Singleton: admin, treasury, season counter, stats |
 | StablecoinConfig PDA | `Hz3iR5vjwoTRigzxg7orj4WBvCndNMDsnbq2Y4V8AE2u` | Allowlist of accepted stablecoin mints (USDC devnet bootstrapped) |
 | Cyber Snake Game PDA (id=1) | `3JzoZionKcNrcZLNsvigsUxpE6y7ZRXBx25MmiVRXeBJ` | Registered first arcade game |
-| Contention Markets v2.1 | `69YfcveAbLbJ5LNERjq6k5wnszfZbXMYVzx2j8Ca1Xo8` | Two-party wagering (held for v2.2 upgrade) |
+| Contention Markets v2.1 | `69YfcveAbLbJ5LNERjq6k5wnszfZbXMYVzx2j8Ca1Xo8` | Two-party skill-contest settlement (held for v2.2 upgrade) |
 | Magic Chess | `3LVg8uUsHtq6fusjrSfyGUCLQ83TFegDKmY3bCNz3QYr` | On-chain chess engine, fuzz-verified |
 | SPL Memo | `MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr` | Used by submit_score for GPX5 leaderboard memos |
 | USDC devnet (Circle) | `4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU` | Only currently-allowlisted stablecoin |

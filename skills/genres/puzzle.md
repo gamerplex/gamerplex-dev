@@ -45,5 +45,5 @@ Most puzzle games should have no way to "lose" — only a state you need to undo
 ## Gamerplex Fit
 - PER for hidden answers (provably fair, unhackable)
 - Daily puzzles with leaderboards (SOAR)
-- Wagered solving: "I bet you can't solve this in 4 moves"
+- 1v1 solving: "See if you can match my 4-move solve"
 - Community-created puzzles (host earns from entries)

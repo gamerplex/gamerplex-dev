@@ -26,7 +26,7 @@ STRONG:
 UNIQUELY STRONG (nobody else has this):
   ✅ MagicBlock ER — blockchain IS the game server (no netcode to write)
   ✅ BOLT ECS — composable on-chain game logic
-  ✅ Contention Markets — atomic wagering settlement
+  ✅ Contention Markets — atomic skill-contest settlement
   ✅ Flipcash — tokens that can't go to zero
   ✅ SOAR — portable on-chain leaderboards
   ✅ PER — hidden information via Intel TDX TEE

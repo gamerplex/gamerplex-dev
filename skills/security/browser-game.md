@@ -27,7 +27,7 @@ if (health > MAX_HEALTH) reject();
 
 ## Score Verification (On-Chain)
 
-For games with on-chain scores (SOAR leaderboard, wagered matches):
+For games with on-chain scores (SOAR leaderboard, 1v1 matches):
 
 ```
 COMMIT-REVEAL PATTERN:

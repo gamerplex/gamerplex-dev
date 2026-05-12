@@ -43,4 +43,4 @@ Hide rewards for exploration:
 - Score = coins + time bonus → Flipcash token
 - SOAR leaderboard: fastest completion time
 - Challenge link: "Beat my time on World 1-3"
-- Wagered speedruns via Contention Markets
+- 1v1 speedruns via Contention Markets
