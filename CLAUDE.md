@@ -11,8 +11,8 @@ SOVEREIGN: Everything runs on the creator's machine. No platform lock-in.
 QUALITY:   Every game must pass the "would I play this for 5 minutes?" test.
 OPEN:      Prefer open source tools. Godot over Unity. Blender over Maya. GIMP over Photoshop.
 ON-CHAIN:  Smart contracts earn fees forever. No middleman. No billing dashboard.
-FAIR:      Community tokens that don't go to zero (Flipcash bonding curve).
-DURABLE:   NFT assets that hold value because they're backed by real game economies.
+FAIR:      One currency, spent on real use. Rewards are free Credits. No per-game tokens.
+DURABLE:   Player items are soulbound: they unlock gameplay and are never traded.
 ```
 
 **The mission:** In 2 years, web3 games built on Gamerplex will be indistinguishable from AAA quality. AI vibe coding + sovereign infrastructure + on-chain economies = the future of gaming. We lead the way.
@@ -142,7 +142,7 @@ When wiring on-chain features, follow these principles:
 ```
 1. GAME FIRST, CHAIN SECOND
    The game must be fun WITHOUT any web3 features.
-   Tokens, NFTs, on-chain settlement are multipliers, not foundations.
+   Currency and on-chain settlement are multipliers, not foundations.
 
 2. NEVER TRUST THE CLIENT
    Scores, match results, game state — validate on-chain or server-side.
@@ -152,17 +152,17 @@ When wiring on-chain features, follow these principles:
    Client commits hash(score + nonce). Server verifies. Then reveals.
    Prevents score manipulation.
 
-4. TOKENS THAT DON'T GO TO ZERO
-   Flipcash bonding curve: always redeemable for USDF.
-   No rug pulls. No dead tokens. Floor price guaranteed by math.
+4. ONE CURRENCY, SPENT NOT TRADED
+   Gamerplex has one currency, spent on plays and features. Rewards are free Credits.
+   Never launch a per-game token. Never describe price, value or returns.
 
-5. NFTs WITH UTILITY
-   Game assets (characters, items, skins) as NFTs only if they DO something.
-   No JPEG speculation. The NFT must unlock gameplay.
+5. ITEMS UNLOCK GAMEPLAY
+   Items are soulbound (tied to the player), never traded or sold between players.
+   Call them items, skins or pets: never NFTs.
 
 6. PERMISSIONLESS
    Anyone can play. Wallet optional for free play.
-   Wallet required only for: paid matches, token purchase, NFT ownership.
+   Wallet required only for: paid plays and spending the platform currency.
 ```
 
 ## Skills
