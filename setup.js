@@ -101,7 +101,7 @@ const MCP_REGISTRY = {
 // ============================================
 
 const TEMPLATES = {
-  platformer: { pattern: "platformer", file: "platformer-2d", name: "2D Platformer (Mario-style)" },
+  platformer: { pattern: "platformer", file: "platformer-2d", name: "2D Platformer" },
   "word-game": { pattern: "hidden-info", file: "hidden-info-duel", name: "Word/Guessing Game (Wordle-style)" },
   "aim-trainer": { pattern: "timing-reflex", file: "reflex-duel", name: "Aim Trainer / Reflex Game" },
   "board-game": { pattern: "grid-strategy", file: "grid-strategy", name: "Board/Strategy Game (Chess-style)" },

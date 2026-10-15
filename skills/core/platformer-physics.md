@@ -1,4 +1,4 @@
-# Platformer Physics — What Makes Mario Feel Like Mario
+# Platformer Physics — What Makes a Jump Feel Good
 
 These are the hidden mechanics that separate good platformers from bad ones. Implement ALL of them.
 
@@ -37,7 +37,7 @@ if (jumpReleased && vy < 0) {
 
 ## Non-Parabolic Gravity
 
-Real Mario doesn't use uniform gravity. Falling is faster than rising — it feels "snappy."
+Classic platformers don't use uniform gravity. Falling is faster than rising — it feels "snappy."
 
 ```
 if (vy > 0) {
